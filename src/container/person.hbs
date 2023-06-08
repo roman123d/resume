@@ -11,7 +11,7 @@
         <section>
             {{> title data="My person" person=true}}
             <ul>
-                 {{> title data="Stacks"}}
+                 {{> title data="person"}}
                   
                             {{#each person}}
                         <ul>
@@ -26,7 +26,7 @@
         </section> 
         </main>
     {{/with}}
-
+    </div>
 
 {{!-- 
     Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
