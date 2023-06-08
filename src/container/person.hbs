@@ -11,20 +11,21 @@
         <section>
             {{> title data="My person" person=true}}
             <ul>
-                {{#each person}}
-                    <li>
-                         {{name}}
-                         {{#if point includeZero=true}} {{/if}}
-                        {{#if isEnd}} (ще в процесі) {{/if}}
-                    </li>
-                {{/each}}
+                 {{> title data="Stacks"}}
+                  
+                            {{#each person}}
+                        <ul>
+                        <li>
+                            <div>
+                                {{> link text=name href=url blank=true noLine=true}}
+                            </div>    
+                        </li>
+                        </ul>
+                            {{/each}}
             </ul>
         </section> 
-
-            </main> 
-     {{/with}}
-          
-</div>
+        </main>
+    {{/with}}
 
 
 {{!-- 
