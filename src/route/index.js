@@ -365,6 +365,7 @@ router.get('/person', function (req, res) {
         },
       ],
     },
+    footer,
   })
 })
 
