@@ -1,0 +1,129 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <section> 
+            {{> title data="Bio" big=true}}
+            <ul>
+                <li>{{name}}</li>
+                <li>{{birthdate}}</li>
+                <li>{{birthplace}}</li>
+                <li>{{deathdate}}</li>
+                <li>{{deathplace}}</li>
+                <li>{{nationality}}</li>
+                <li>{{occupation}}</li>
+                <li>{{known_for}}</li>
+            </ul> 
+             <br>
+            {{> title data="education"}}
+                {{#each education}}
+                <ul>
+                    <li>{{degree}}</li> 
+                    <li>{{field}}</li> 
+                    <li>{{institution}}</li> 
+                    <li>{{year}}</li> 
+                 </ul>       
+                {{/each}}
+                <br>
+                <hr>
+            {{> title data="notable_publications"}}
+                <br>
+                 {{#each notable_publications}}
+                 <ul>
+                    <li>
+                        <div>
+                            {{> link text=title href=url noLine=true}}
+                        </div>
+                    </li>
+                </ul>
+                 <ul>
+                    <li>
+                        <div>
+                            {{> link text=year href=url noLine=true}}
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>
+                            {{> link text=publisher href=url noLine=true}}
+                        </div>
+                    </li>
+                </ul>
+                {{/each}}  
+
+                {{> title data="partners"}}
+                <br>
+                 {{#each partners}}
+                 <ul>
+                    <li>
+                        <div>
+                            {{> link text=name href=url noLine=true}}
+                        </div>
+                    </li>
+                </ul>
+                 <ul>
+                    <li>
+                        <div>
+                            {{> link text=relationship href=url noLine=true}}
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <div>
+                            {{> link text=years href=url noLine=true}}
+                        </div>
+                    </li>
+                </ul>
+                {{/each}}
+                    <hr>
+                    <br>
+                {{> title data="awards"}}
+                {{#each awards}}
+                <ul>
+                    <li>{{title}}</li> 
+                    <li>{{year}}</li> 
+                    <li>{{description}}</li>  
+                 </ul>       
+                {{/each}}
+                    <br>
+                {{> title data="influences"}}
+                {{#each influenced}}
+                <ul>
+                <li>{{this}}</li>
+                 </ul>  
+                {{/each}}
+                <br>
+                {{> title data="quotes"}}
+                {{#each quotes}}
+                 <ul>
+                <li>{{this}}</li>
+                 </ul>  
+                {{/each}}
+                <br>
+                {{> title data="major_discoveries"}}
+                {{#each major_discoveries}}
+                <ul>
+                    <li>{{title}}</li> 
+                    <li>{{year}}</li> 
+                    <li>{{description}}</li>  
+                 </ul>       
+                {{/each}}
+                <br>
+                {{> title data="contributions"}}
+                 {{#each contributions}}
+                 <ul>
+                <li>{{this}}</li>
+                 </ul>  
+                {{/each}}
+                    
+            </section> 
+    </div>
+   
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
