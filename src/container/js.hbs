@@ -1,0 +1,89 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <section>
+            <ul>
+            {{> title data="JS" big=true}}
+            </ul>
+            <ul>
+                <li>{{name}}</li>
+                <li>{{description}}</li>
+                <li>{{history.year}}</li>
+                <li>{{history.founder}}</li>
+            </ul>
+            <ul>
+             {{> title data="tupes"}}
+            </ul>
+
+            <ul>
+                <button type="button" class="btn btn-primary">Number</button>
+                <button type="button" class="btn btn-info">String</button>
+                <button type="button" class="btn btn-danger">Boolean</button>
+                <button type="button" class="btn btn-primary">Null</button>
+                <button type="button" class="btn btn-success">Undefined</button>
+                <button type="button" class="btn btn-warning">Symbol</button>
+                <button type="button" class="btn btn-secondary">Object</button>
+            </ul>
+
+            <ul>
+             {{> title data="syntax"}}
+            </ul>
+            <ul>
+            <li>{{syntax.variables}}</li>
+            <li>{{syntax.functions}}</li>
+            <li>{{syntax.conditionals}}</li>
+            <li>{{syntax.loops}}</li>
+            <li>{{syntax.classes}}</li>
+            </ul>
+             <ul>
+             {{> title data="features"}}
+            </ul>
+
+            {{#each features}}
+                 <ul>
+                <li>{{this}}</li>
+                 </ul>  
+                {{/each}}
+            <ul>  
+            {{> title data="libraries"}}
+            </ul>
+           
+            {{#each libraries}}
+                 <ul>
+                <li>{{this}}</li>
+                 </ul>  
+                {{/each}}
+
+            <ul>  
+            {{> title data="tools"}}
+            </ul>
+            <ul>
+            <button type="button" class="btn btn-outline-primary">Babel</button>
+            <button type="button" class="btn btn-outline-secondary">Webpack</button>
+            <button type="button" class="btn btn-outline-success">ESLint</button>
+            <button type="button" class="btn btn-outline-danger">Jest</button>
+            <button type="button" class="btn btn-outline-warning">Mocha</button>
+            <button type="button" class="btn btn-outline-info">Chai</button>
+            <button type="button" class="btn btn-outline-primary">Selenium</button>
+            <button type="button" class="btn btn-outline-dark">Cypress</button>
+            </ul>
+
+            <ul>  
+            {{> title data="community"}}
+            </ul>
+
+                 <ul>
+                {{#each community}}
+                    <li>{{name}} {{type}} </li>
+
+                {{/each}}
+            </section> 
+    </div>
+   
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}

@@ -35,8 +35,7 @@
                 {{#each hobbies}}
                 <li>
                     {{name}}
-                        {{#if point includeZero=true}} ({{point}}) {{/if}}
-                        {{#if isMain}} (favourite) {{/if}}
+                     {{> link text=company.name href=company.url blank=true noLine=true}}
 
                 </li>
                 {{/each}}
