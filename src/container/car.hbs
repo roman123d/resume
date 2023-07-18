@@ -1,0 +1,178 @@
+{{!-- 
+Це код container файлу для summary сторінки, 
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
+--}}
+
+<div>
+    <section> 
+        <ul>
+            {{> title data="Car" big=true}}
+        </ul>
+        <hr>
+        <ul>
+                <li>{{make}}</li>
+                <li>{{model}}</li>
+                <li>{{year}}</li>
+                <li>{{color}}</li>
+        </ul> 
+            
+            {{> title data="features-interior-seats"}}
+        <ul>
+                <li>{{features.interior.seats.material}}</li> 
+                <li>{{features.interior.seats.color}}</li>
+                <li>{{features.interior.seats.heated}}</li>
+                <li>{{features.interior.seats.ventilated}}</li>
+        </ul>       
+                
+            {{> title data="dashboard"}}
+        <ul>
+                <li>{{features.interior.dashboard.material}}</li> 
+                <li>{{features.interior.dashboard.color}}</li>
+        </ul>
+
+        <hr>
+        <ul>
+            {{> title data="display"}}
+        </ul>
+                <button type="button" class="btn btn-outline-primary">LCD</button>
+                <button type="button" class="btn btn-outline-success">10.1</button>
+                <button type="button" class="btn btn-outline-danger">1280x720</button>
+                <button type="button" class="btn btn-outline-light">true</button>
+
+        <ul>
+        <br>
+            {{> title data="audio"}}
+        </ul>
+                <button type="button" class="btn btn-primary">JBL</button>
+                <button type="button" class="btn btn-secondary">8</button>
+                <button type="button" class="btn btn-success">true</button>
+                <button type="button" class="btn btn-danger">true</button>
+                <button type="button" class="btn btn-warning">true</button>
+
+        <ul>
+        <br>
+            {{> title data="exterior"}}
+        </ul>  
+                <button type="button" class="btn btn-light">wheels</button>
+                <button type="button" class="btn btn-primary">18</button>
+                <button type="button" class="btn btn-secondary">lloy</button>
+                <button type="button" class="btn btn-success">silver</button>
+           
+        <ul>
+        <br>
+        </ul>  
+                <button type="button" class="btn btn-light">headlights</button>
+                <button type="button" class="btn btn-success">LED</button>
+                <button type="button" class="btn btn-secondary">high</button>
+                <button type="button" class="btn btn-primary">true</button>
+                
+        <ul>
+            <br>
+        </ul>  
+                <button type="button" class="btn btn-light">sunroof</button>
+                <button type="button" class="btn btn-warning">panoramic</button>
+                <button type="button" class="btn btn-info">large</button>
+                <button type="button" class="btn btn-success">true</button>
+
+        <ul>
+        <br>
+                {{> title data="safety"}} 
+              </ul> 
+        <ul>
+         airbags
+        </ul>  
+        
+            <button type="button" class="btn btn-light">front</button>
+            <button type="button" class="btn btn-outline-success">2</button>
+            <button type="button" class="btn btn-light">side</button>
+            <button type="button" class="btn btn-outline-info">2</button>
+            <button type="button" class="btn btn-light">knee</button>
+           <button type="button" class="btn btn-outline-success">2</button>
+           <button type="button" class="btn btn-light">rear</button>
+          <button type="button" class="btn btn-outline-warning">2</button>
+
+
+        <ul>
+            <br>
+        </ul> 
+        <ul>
+            assistance
+        </ul>  
+        
+            <button type="button" class="btn btn-light">blind_spot_monitoring</button>
+            <button type="button" class="btn btn-outline-success">true</button>
+             <br>
+             <br>
+            <button type="button" class="btn btn-light">rear_cross_traffic_alert</button>
+            <button type="button" class="btn btn-outline-info">true</button>
+             <br>
+             <br>
+            <button type="button" class="btn btn-light">lane_departure_warning</button>
+           <button type="button" class="btn btn-outline-success">true</button>
+           <br>
+            <br>
+           <button type="button" class="btn btn-light">adaptive_cruise_control</button>
+          <button type="button" class="btn btn-outline-warning">true</button>
+              <br>
+             <br>
+            <button type="button" class="btn btn-light">collision_warning</button>
+           <button type="button" class="btn btn-outline-success">true</button>
+           
+        <hr>
+          
+            {{> title data="engine" big=true}}
+        
+        <ul>
+               
+                <li>{{engine.type}}</li>
+                <li>{{engine.displacement}}</li>
+                <li>{{engine.horsepower}}</li>
+                <li>{{engine.torque}}</li>
+                <li>{{engine.transmission.type}}</li>
+                <li>{{engine.transmission.gears}}</li>
+        </ul> 
+
+            {{> title data="fuel_economy" big=true}}
+        </ul>
+        <ul>
+               
+                <li>{{fuel_economy.city}}</li>
+                <li>{{fuel_economy.highway}}</li>
+                <li>{{fuel_economy.combined}}</li>
+               
+        </ul> 
+         
+          <ul>
+        
+                {{> title data="price"}} 
+              </ul> 
+        
+        
+            <button type="button" class="btn btn-light">base</button>
+            <button type="button" class="btn btn-outline-success">25900</button>
+            <button type="button" class="btn btn-light">destination</button>
+            <button type="button" class="btn btn-outline-info">995</button>
+        <ul>
+           
+        </ul> 
+        <ul>
+            options
+        </ul>  
+
+            <button type="button" class="btn btn-light">navigation</button>
+            <button type="button" class="btn btn-outline-success">1200</button>
+            <button type="button" class="btn btn-light">moonroof</button>
+            <button type="button" class="btn btn-outline-warning">800</button>
+            <button type="button" class="btn btn-light">premium_paint</button>
+            <button type="button" class="btn btn-outline-success">595</button>
+            <button type="button" class="btn btn-light">total</button>
+            <button type="button" class="btn btn-outline-warning">28990</button>
+
+
+            </section> 
+    </div>
+   
+{{!-- 
+    Цей код містить лише те, що буде виводитись в {{{body}}} в layout/default.hbs
+    Адже наш layout/default.hbs має вже структуру HTML
+--}}
